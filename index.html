@@ -1,3 +1,67 @@
+<!DOCTYPE html>
 <html>
-<h1>Hello world!</h1>
+    <head>
+    </head>
+    <body>
+        <h1>Damola 'D' Omotosho</h1>
+        <img src="/images/my-photo.jpg" />
+        <div id="profileContent">
+            <h3>Professional conference speaker & software developer.</h3>
+            <a href="https://hackhands.com/hercules08/" target="_blank">Need coding help?</a>
+            <br >
+            <a id="talkToMe" href="#">Contact me</a>
+        </div>
+        <script type="text/javascript">
+            var username = "damola.omotosho";
+            var hostname = "gmail.com";
+            var linktext = username + "@" + hostname;
+            document.getElementById("talkToMe").onclick = function () {
+                var myDiv = document.getElementById("profileContent");
+                var aTag = document.createElement('a');
+                mailTo = "mailto:" + username + "@" + hostname;
+                aTag.setAttribute('href', mailTo);
+                aTag.innerHTML = linktext;
+                myDiv.appendChild(aTag)
+            }
+    
+            document.getElementById("contact-icon").onclick = function () {
+                var myDiv = document.getElementById("profileContent");
+                var aTag = document.createElement('a');
+                mailTo = "mailto:" + username + "@" + hostname;
+                aTag.setAttribute('href', mailTo);
+                aTag.innerHTML = linktext;
+                myDiv.appendChild(aTag);
+                window.location = "/#talkToMe"
+            }
+        </script>
+
+        <!-- Google Analytics -->
+        <script type="text/javascript">
+        
+            var google_analytics_id = 'UA-86965507-2';  // Enter your ID here. ex: UA-9999999-99
+        
+            if (google_analytics_id != '') {
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', google_analytics_id]);
+                _gaq.push(['_trackPageview']);
+                setTimeout("_gaq.push(['_trackEvent', '15_seconds', 'read'])",15000);  // --additional line
+                (function () {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
+        </script>
+        <!-- Hotjar Tracking Code for https://www.damolaomotosho.com -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:1147767,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+    </body>
 </html>
